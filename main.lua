@@ -12,14 +12,14 @@ local inputBox = Instance.new("TextBox")
 
 screenGui.Parent = game.CoreGui
 mainFrame.Parent = screenGui
-mainFrame.Size = UDim2.new(0, 400, 0, 600)
-mainFrame.Position = UDim2.new(0.5, -200, 0.5, -300)
+mainFrame.Size = UDim2.new(0, 300, 0, 500)
+mainFrame.Position = UDim2.new(0.5, -150, 0.5, -250)
 mainFrame.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
 mainFrame.Active = true
 mainFrame.Draggable = true
 
 discordButton.Parent = mainFrame
-discordButton.Size = UDim2.new(0.25, 0, 0, 50)
+discordButton.Size = UDim2.new(0.3, 0, 0, 40)
 discordButton.Position = UDim2.new(0, 0, 0, 0)
 discordButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
 discordButton.TextColor3 = Color3.new(1, 1, 1)
@@ -29,19 +29,19 @@ discordButton.MouseButton1Click:Connect(function()
 end)
 
 mainMenuButton.Parent = mainFrame
-mainMenuButton.Size = UDim2.new(0.25, 0, 0, 50)
-mainMenuButton.Position = UDim2.new(0.25, 0, 0, 0)
+mainMenuButton.Size = UDim2.new(0.3, 0, 0, 40)
+mainMenuButton.Position = UDim2.new(0.3, 0, 0, 0)
 mainMenuButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
 mainMenuButton.TextColor3 = Color3.new(1, 1, 1)
 mainMenuButton.Text = "Main Menu"
 mainMenuButton.MouseButton1Click:Connect(function()
     local mainMenu = Instance.new("Frame", mainFrame)
-    mainMenu.Size = UDim2.new(1, 0, 1, 0)
-    mainMenu.Position = UDim2.new(0, 0, 0, 50)
+    mainMenu.Size = UDim2.new(1, 0, 1, -40)
+    mainMenu.Position = UDim2.new(0, 0, 0, 40)
     mainMenu.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 
     local speedToggle = Instance.new("TextButton", mainMenu)
-    speedToggle.Size = UDim2.new(0.8, 0, 0, 50)
+    speedToggle.Size = UDim2.new(0.8, 0, 0, 40)
     speedToggle.Position = UDim2.new(0.1, 0, 0.1, 0)
     speedToggle.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
     speedToggle.TextColor3 = Color3.new(1, 1, 1)
@@ -57,8 +57,8 @@ mainMenuButton.MouseButton1Click:Connect(function()
     end)
 
     local jumpToggle = Instance.new("TextButton", mainMenu)
-    jumpToggle.Size = UDim2.new(0.8, 0, 0, 50)
-    jumpToggle.Position = UDim2.new(0.1, 0, 0.3, 0)
+    jumpToggle.Size = UDim2.new(0.8, 0, 0, 40)
+    jumpToggle.Position = UDim2.new(0.1, 0, 0.2, 0)
     jumpToggle.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
     jumpToggle.TextColor3 = Color3.new(1, 1, 1)
     jumpToggle.Text = "Toggle Jump"
@@ -73,8 +73,8 @@ mainMenuButton.MouseButton1Click:Connect(function()
     end)
 
     local silentAimToggle = Instance.new("TextButton", mainMenu)
-    silentAimToggle.Size = UDim2.new(0.8, 0, 0, 50)
-    silentAimToggle.Position = UDim2.new(0.1, 0, 0.5, 0)
+    silentAimToggle.Size = UDim2.new(0.8, 0, 0, 40)
+    silentAimToggle.Position = UDim2.new(0.1, 0, 0.3, 0)
     silentAimToggle.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
     silentAimToggle.TextColor3 = Color3.new(1, 1, 1)
     silentAimToggle.Text = "Toggle Silent Aim"
@@ -84,8 +84,8 @@ mainMenuButton.MouseButton1Click:Connect(function()
     end)
 
     local espToggle = Instance.new("TextButton", mainMenu)
-    espToggle.Size = UDim2.new(0.8, 0, 0, 50)
-    espToggle.Position = UDim2.new(0.1, 0, 0.7, 0)
+    espToggle.Size = UDim2.new(0.8, 0, 0, 40)
+    espToggle.Position = UDim2.new(0.1, 0, 0.4, 0)
     espToggle.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
     espToggle.TextColor3 = Color3.new(1, 1, 1)
     espToggle.Text = "Toggle ESP"
@@ -95,8 +95,8 @@ mainMenuButton.MouseButton1Click:Connect(function()
     end)
 
     local btoolsButton = Instance.new("TextButton", mainMenu)
-    btoolsButton.Size = UDim2.new(0.8, 0, 0, 50)
-    btoolsButton.Position = UDim2.new(0.1, 0, 0.9, 0)
+    btoolsButton.Size = UDim2.new(0.8, 0, 0, 40)
+    btoolsButton.Position = UDim2.new(0.1, 0, 0.5, 0)
     btoolsButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
     btoolsButton.TextColor3 = Color3.new(1, 1, 1)
     btoolsButton.Text = "Get BTools"
@@ -108,15 +108,15 @@ mainMenuButton.MouseButton1Click:Connect(function()
 end)
 
 adminPanelButton.Parent = mainFrame
-adminPanelButton.Size = UDim2.new(0.25, 0, 0, 50)
-adminPanelButton.Position = UDim2.new(0.5, 0, 0, 0)
+adminPanelButton.Size = UDim2.new(0.3, 0, 0, 40)
+adminPanelButton.Position = UDim2.new(0.6, 0, 0, 0)
 adminPanelButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
 adminPanelButton.TextColor3 = Color3.new(1, 1, 1)
 adminPanelButton.Text = "Admin Panel"
 adminPanelButton.MouseButton1Click:Connect(function()
     local adminPanel = Instance.new("Frame", mainFrame)
-    adminPanel.Size = UDim2.new(1, 0, 1, 0)
-    adminPanel.Position = UDim2.new(0, 0, 0, 50)
+    adminPanel.Size = UDim2.new(1, 0, 1, -40)
+    adminPanel.Position = UDim2.new(0, 0, 0, 40)
     adminPanel.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 
     local commands = {
@@ -127,8 +127,8 @@ adminPanelButton.MouseButton1Click:Connect(function()
 
     for i, cmd in pairs(commands) do
         local button = Instance.new("TextButton", adminPanel)
-        button.Size = UDim2.new(0.8, 0, 0, 50)
-        button.Position = UDim2.new(0.1, 0, 0.1 * i, 0)
+        button.Size = UDim2.new(0.8, 0, 0, 40)
+        button.Position = UDim2.new(0.1, 0, 0.1 * (i - 1), 0)
         button.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
         button.TextColor3 = Color3.new(1, 1, 1)
         button.Text = cmd
@@ -136,26 +136,26 @@ adminPanelButton.MouseButton1Click:Connect(function()
 end)
 
 commandBarButton.Parent = mainFrame
-commandBarButton.Size = UDim2.new(0.25, 0, 0, 50)
-commandBarButton.Position = UDim2.new(0.75, 0, 0, 0)
+commandBarButton.Size = UDim2.new(0.3, 0, 0, 40)
+commandBarButton.Position = UDim2.new(0.9, 0, 0, 0)
 commandBarButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
 commandBarButton.TextColor3 = Color3.new(1, 1, 1)
 commandBarButton.Text = "Command Bar"
 commandBarButton.MouseButton1Click:Connect(function()
     local commandBar = Instance.new("Frame", mainFrame)
-    commandBar.Size = UDim2.new(1, 0, 1, 0)
-    commandBar.Position = UDim2.new(0, 0, 0, 50)
+    commandBar.Size = UDim2.new(1, 0, 1, -40)
+    commandBar.Position = UDim2.new(0, 0, 0, 40)
     commandBar.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 
     inputBox.Parent = commandBar
-    inputBox.Size = UDim2.new(0.8, 0, 0, 50)
+    inputBox.Size = UDim2.new(0.8, 0, 0, 40)
     inputBox.Position = UDim2.new(0.1, 0, 0.8, 0)
-        inputBox.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+    inputBox.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
     inputBox.TextColor3 = Color3.new(1, 1, 1)
     inputBox.Text = ""
 
     executeButton.Parent = commandBar
-    executeButton.Size = UDim2.new(0.8, 0, 0, 50)
+    executeButton.Size = UDim2.new(0.8, 0, 0, 40)
     executeButton.Position = UDim2.new(0.1, 0, 0.9, 0)
     executeButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
     executeButton.TextColor3 = Color3.new(1, 1, 1)
