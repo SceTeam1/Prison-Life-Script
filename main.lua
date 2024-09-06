@@ -15,6 +15,8 @@ mainFrame.Parent = screenGui
 mainFrame.Size = UDim2.new(0, 400, 0, 600)
 mainFrame.Position = UDim2.new(0.5, -200, 0.5, -300)
 mainFrame.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
+mainFrame.Active = true
+mainFrame.Draggable = true
 
 discordButton.Parent = mainFrame
 discordButton.Size = UDim2.new(0.25, 0, 0, 50)
@@ -148,7 +150,7 @@ commandBarButton.MouseButton1Click:Connect(function()
     inputBox.Parent = commandBar
     inputBox.Size = UDim2.new(0.8, 0, 0, 50)
     inputBox.Position = UDim2.new(0.1, 0, 0.8, 0)
-    inputBox.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+        inputBox.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
     inputBox.TextColor3 = Color3.new(1, 1, 1)
     inputBox.Text = ""
 
@@ -164,7 +166,7 @@ commandBarButton.MouseButton1Click:Connect(function()
         local command, target = string.match(commandText, "([^ ]+) (.*)")
         command = command or commandText
 
-        if commands[command] then
+        if commands and commands[command] then
             if commands[command].active ~= nil then
                 commands[command].active = not commands[command].active
             else
