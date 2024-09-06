@@ -150,28 +150,28 @@ commandBarButton.MouseButton1Click:Connect(function()
     inputBox.Position = UDim2.new(0.1, 0, 0.8, 0)
     inputBox.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
     inputBox.TextColor3 = Color3.new(1, 1, 1)
-inputBox.Text = ""
+    inputBox.Text = ""
 
-executeButton.Parent = commandBar
-executeButton.Size = UDim2.new(0.8, 0, 0, 50)
-executeButton.Position = UDim2.new(0.1, 0, 0.9, 0)
-executeButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
-executeButton.TextColor3 = Color3.new(1, 1, 1)
-executeButton.Text = "Execute Command"
+    executeButton.Parent = commandBar
+    executeButton.Size = UDim2.new(0.8, 0, 0, 50)
+    executeButton.Position = UDim2.new(0.1, 0, 0.9, 0)
+    executeButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+    executeButton.TextColor3 = Color3.new(1, 1, 1)
+    executeButton.Text = "Execute Command"
 
-executeButton.MouseButton1Click:Connect(function()
-    local commandText = inputBox.Text
-    local command, target = string.match(commandText, "([^ ]+) (.*)")
-    command = command or commandText
+    executeButton.MouseButton1Click:Connect(function()
+        local commandText = inputBox.Text
+        local command, target = string.match(commandText, "([^ ]+) (.*)")
+        command = command or commandText
 
-    if commands[command] then
-        if commands[command].active ~= nil then
-            commands[command].active = not commands[command].active
+        if commands[command] then
+            if commands[command].active ~= nil then
+                commands[command].active = not commands[command].active
+            else
+                commands[command].action(target)
+            end
         else
-            commands[command].action(target)
+            print("Unknown command: " .. command)
         end
-    else
-        print("Unknown command: " .. command)
-    end
+    end)
 end)
-    
